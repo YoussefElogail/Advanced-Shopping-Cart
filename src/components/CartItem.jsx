@@ -24,7 +24,7 @@ const CartItem = ({ id, quantity }) => {
           {formatCurrency(itme.price)}
         </div>
       </div>
-        <div>{itme.price * quantity}</div>
+        <div>{(itme.price * quantity).toFixed(2)}</div>
       <Button variant="outline-danger" size="sm" onClick={()=> removeItemFromCart(id)}>
         &times;
       </Button>
